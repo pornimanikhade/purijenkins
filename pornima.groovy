@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('pull') { 
             steps {
-                git branch: 'main', url: 'https://github.com/sagarfast/student-ui.git'
+                echo 'pull stage'
             }
         }
-        stage('builds') { 
+        stage('Test') { 
             steps {
-                sh 'mvn clean package'
+                 echo 'test stage'
             }
         }
         stage('Deploy') { 
             steps {
-                echo 'deploy stage'
+                 echo 'deploy stage'
             }
         }
     }
